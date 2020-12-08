@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_08_182018) do
+ActiveRecord::Schema.define(version: 2020_12_08_195653) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,20 +18,22 @@ ActiveRecord::Schema.define(version: 2020_12_08_182018) do
   create_table "zones", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "zone_name"
-    t.integer "zone_use_type"
-    t.text "zone_use_descrption"
-    t.boolean "multifamily_housing"
-    t.integer "minimum_lot_size_sf"
-    t.integer "percent_lot_coverage"
-    t.integer "minimum_lot_area_per_dwelling_unit_sf"
-    t.integer "maximum_building_floors"
-    t.integer "maximum_height_ft"
-    t.integer "maximum_dwelling_units"
-    t.integer "maximum_dwelling_units_per_acre"
-    t.integer "floor_area_ratio"
+    t.string "zo_name"
+    t.integer "zo_usety"
+    t.text "zo_usede"
+    t.boolean "multifam"
+    t.integer "minlotsize"
+    t.integer "pctlotsize"
+    t.integer "lapdu"
+    t.integer "maxflrs"
+    t.integer "maxheight"
+    t.integer "maxdu"
+    t.integer "dupac"
+    t.integer "far"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "from_spatial_view"
+    t.boolean "is_resolved"
   end
 
 end

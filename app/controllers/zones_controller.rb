@@ -46,6 +46,6 @@ class ZonesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def zone_params
-      params.require(:zone).permit(:name, :email, :zone_name, :zone_use_type, :zone_use_descrption, :multifamily_housing, :minimum_lot_size_sf, :percent_lot_coverage, :minimum_lot_area_per_dwelling_unit_sf, :maximum_building_floors, :maximum_height_ft, :maximum_dwelling_units, :maximum_dwelling_units_per_acre, :floor_area_ratio)
+      params.require(:zone).permit(:name, :email, :zo_name, :zo_usety, :zo_usede, :multifam, :minlotsize, :pctlotsize, :lapdu, :maxflrs, :maxheight, :maxdu, :dupac, :far, :from_spatial_view, :is_resolved)
     end
 end
