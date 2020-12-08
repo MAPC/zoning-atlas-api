@@ -2,7 +2,7 @@
 lock "~> 3.14.1"
 
 set :application, "zoning-atlas-api"
-set :repo_url, "git@egithub.com:mapc/zoning-atlas-api.git"
+set :repo_url, "git@github.com:mapc/zoning-atlas-api.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
