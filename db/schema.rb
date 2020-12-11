@@ -10,30 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_08_195653) do
+ActiveRecord::Schema.define(version: 0) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "zones", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "zo_name"
-    t.integer "zo_usety"
+  create_table "form_submissions", id: false, force: :cascade do |t|
+    t.integer "objectid", null: false
+    t.integer "resolved", limit: 2
+    t.string "email", limit: 255
+    t.string "zo_name", limit: 255
+    t.integer "zo_usety", limit: 2
     t.text "zo_usede"
-    t.boolean "multifam"
+    t.integer "multifam", limit: 2
     t.integer "minlotsize"
-    t.integer "pctlotsize"
-    t.integer "lapdu"
-    t.integer "maxflrs"
-    t.integer "maxheight"
-    t.integer "maxdu"
-    t.integer "dupac"
-    t.integer "far"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.boolean "from_spatial_view"
-    t.boolean "is_resolved"
+    t.decimal "pctlotcov", precision: 3, scale: 2
+    t.integer "lapdu", limit: 2
+    t.decimal "maxflrs", precision: 3, scale: 1
+    t.integer "maxheight", limit: 2
+    t.integer "maxdu", limit: 2
+    t.integer "dupac", limit: 2
+    t.decimal "far", precision: 3, scale: 2
+    t.text "gen_coms"
+    t.integer "view_src", limit: 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["objectid"], name: "r19_sde_rowid_uk", unique: true
   end
-
 end
