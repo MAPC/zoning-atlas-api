@@ -4,7 +4,7 @@ FactoryBot.define do
     resolved { 0 }
     email { 'devnull@mapc.org' }
     zo_name { 'Test Zone' }
-    zo_usety { 'No Zone' }
+    zo_usety { 0 }
     zo_usede { 'Filler text' }
     multifam { 0 }
     minlotsize { 50 }
