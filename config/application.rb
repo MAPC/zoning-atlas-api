@@ -37,7 +37,8 @@ module ZoningAtlasApi
     known_hosts = [
       'http://localhost:8000',
       'http://localhost:9000',
-      'https://mapc.github.io'
+      'https://mapc.github.io',
+      'https://zoningatlas.mapc.org'
     ]
 
     config.middleware.insert_before 0, Rack::Cors do
