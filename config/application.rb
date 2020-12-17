@@ -33,5 +33,18 @@ module ZoningAtlasApi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    
+    known_hosts = [
+      'http://localhost:8000',
+      'http://localhost:9000',
+      'https://mapc.github.io'
+    ]
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins known_hosts
+        resource '/form_submissions', headers: :any, methods: [:post]
+      end
+    end
   end
 end
