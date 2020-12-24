@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_12_23_202237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer "view_src", limit: 2
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string "name"
     t.index ["objectid"], name: "r19_sde_rowid_uk", unique: true
   end
+
 end
