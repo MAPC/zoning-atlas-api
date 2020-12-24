@@ -3,6 +3,7 @@ FactoryBot.define do
     objectid { 0 }
     resolved { 0 }
     email { 'devnull@mapc.org' }
+    name { 'Test Name' }
     zo_name { 'Test Zone' }
     zo_usety { 0 }
     zo_usede { 'Filler text' }
