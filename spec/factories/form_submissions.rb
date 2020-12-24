@@ -18,5 +18,8 @@ FactoryBot.define do
     far { 0.59 }
     gen_coms { 'The endzone!' }
     view_src { 0 }
+    municipality { 'Acton' }
+    zone_objectid { '1234' }
+    zone_rowid { null }
   end
 end
