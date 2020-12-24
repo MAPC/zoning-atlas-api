@@ -3,6 +3,7 @@ FactoryBot.define do
     objectid { 0 }
     resolved { 0 }
     email { 'devnull@mapc.org' }
+    name { 'Test Name' }
     zo_name { 'Test Zone' }
     zo_usety { 0 }
     zo_usede { 'Filler text' }
@@ -17,5 +18,8 @@ FactoryBot.define do
     far { 0.59 }
     gen_coms { 'The endzone!' }
     view_src { 0 }
+    municipality { 'Acton' }
+    zone_objectid { '1234' }
+    zone_rowid { null }
   end
 end
