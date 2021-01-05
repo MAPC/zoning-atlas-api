@@ -46,6 +46,6 @@ class FormSubmissionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def form_submission_params
-      params.require(:form_submission).permit(:objectid, :resolved, :email, :zo_name, :zo_usety, :zo_usede, :multifam, :minlotsize, :pctlotcov, :lapdu, :maxflrs, :maxheight, :maxdu, :dupac, :far, :gen_coms, :view_src)
+      params.require(:form_submission).permit(:objectid, :resolved, :email, :name, :zo_name, :zo_usety, :zo_usede, :multifam, :minlotsize, :pctlotcov, :lapdu, :maxflrs, :maxheight, :maxdu, :dupac, :far, :gen_coms, :view_src, :zone_objectid, :zone_rowid, :municipality)
     end
 end

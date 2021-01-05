@@ -28,5 +28,6 @@ group :development do
   gem 'guard'
   gem 'guard-livereload'
   gem 'guard-rspec'
+  gem 'rack-cors'
   gem 'terminal-notifier-guard'
 end
